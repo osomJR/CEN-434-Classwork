@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Form</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: whitesmoke;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        h1{
+            text-align: center;
+            
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(173, 243, 226);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-top: 20px;
+            border-radius: 15px;
+            padding-top: 30px;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 40px;
+            width: 300px;
+        }
+        label{
+            margin-bottom: 10px;
+            ;
+        }
+        input[type="text"], input[type="email"]{
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px;
+            margin-bottom: 20px;
+        }
+        input[type="date"]{
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px;
+            margin-bottom: 20px;
+        }
+        select{
+            padding: 10px;
+            border: 1px;
+            border-radius: 6px;
+            margin-bottom: 40px;
+        }
+        button{
+            background-color: white;
+            padding: 10px;
+            border: 0px;
+            border-radius: 7px;
+        }
+        button:hover{
+            background-color: aqua;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <h1>CODEX</h1>
+            <input type="text" placeholder="First name">
+            <input type="text" placeholder="Lastname">
+            <input type="email" placeholder="Email">
+            <label>Age</label>
+            <input type="date">   
+            <label>Gender</label>
+            <select>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Others</option>
+            </select>
+            <button>Submit</button>  
+        </form>
+    </div>
+</body>
+</html>

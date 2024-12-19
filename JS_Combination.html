@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combination</title>
+    <st
+</head>
+<body>
+    <div>
+        <label>Enter your first number</label>
+        <input type="number" id="first" min="0">
+        <br><br>
+        <label>Enter your second number</label>
+        <input type="number" id="second" min="0">
+        <br><br>
+        <button onclick="Combination()"> Combination </button>
+        <div id="output"></div>
+    </div>
+    <script>
+        function fact(num){
+            if (num === 0 || num === 1 ) return 1;
+            let res = 1;
+            for (let i = 2; i <= num; i++){
+                res *= i;
+            }
+            return res;
+        }
+
+        function Combination() {
+            const n = parseInt(document.getElementById("first").value);
+            const r = parseInt(document.getElementById("second").value);
+
+            if (isNaN(n) || isNaN(r)) {
+                document.getElementById("output").innerText = "Please enter valid numbers";
+                return;
+            }
+            if (n > r){
+                const combination = fact(n) / (fact(r) * fact(n - r));
+                document.getElementById("output").innerText = `C(${n}, ${r}) = ${combination}`;
+            }
+            else if (n < r){
+                const combination = fact(r) / (fact(n) * fact(r - n));
+                document.getElementById("output").innerText = `C(${n}, ${r}) = ${combination}`;
+            }
+            else if (n === r){
+                const combination = fact(n - 1) / (fact(r) * fact((n - 1) - r));
+                document.getElementById("output").innerText = `C(${n}, ${r}) = ${combination}`;
+            }
+        }
+
+    </script>
+</body>
+</html>

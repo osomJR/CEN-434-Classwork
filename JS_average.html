@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average of a Given Array of Numbers</title>
+</head>
+<body>
+    <div id="result">
+    </div>
+    <script type="text/javascript">
+        const A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let sum = 0;
+        for (let i = 0; i < A.length; i++) {
+            sum += A[i];
+        }
+        const avg = sum / A.length;
+        document.getElementById('result').innerHTML = `
+            <h1>Average of an array</h1>
+            Array A = [${A.join(", ")}] <br>
+            The average of A is: ${avg}
+        `;
+
+        console.log("Array A =", A);
+        console.log("The average of A is:", avg);
+    </script>
+</body>
+</html>
